@@ -11,6 +11,7 @@
   "dependencies": {
     "@coreui/icons": "^2.1.0",
     "bootstrap": "^5.2.1",
+    "eslint-plugin-react-hooks": "^5.0.0-next-8951c5fc9-20220915",
     "hooks": "^0.3.2",
     "mongoose": "^6.5.5",
     "next": "12.2.5",

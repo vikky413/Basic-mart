@@ -19,7 +19,7 @@ const Home = () => {
       
     };
     getProduct();
-  }, []);
+  }, [componentMounted, filter]);
   
   const filterhandle = (cat) =>{
     const updateList = data.filter((x)=> x.category === cat)

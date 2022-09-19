@@ -22,7 +22,7 @@ const Product = () => {
       setLoading(false);
     };
     getProduct();
-  }, []);
+  }, [pid]);
  
   const handleCart = (product)=>{
    if(cartbtn === "Add to Cart"){
