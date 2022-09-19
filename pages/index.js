@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 const Home = () => {
   const [data,setData] = useState([])
@@ -26,12 +27,13 @@ const Home = () => {
   }
 
   const productList = filter.map((product) => {
+    const src = `${product.image}`
     return (
       // eslint-disable-next-line react/jsx-key
       <div className="col-md-4 mb-4">
         <div className="card h-100 text-center p-4" key={product.id}>
           <div className="card-image">
-            <img src={product.image} alt={product.title} height="300px" />
+            <Image loader={()=> src} src={src} alt={product.title} height="300px" width="300px"/>
           </div>
           <div className="card-body">
             <h5 className="card-title"><b>{product.title.substring(0,11)}</b></h5>
