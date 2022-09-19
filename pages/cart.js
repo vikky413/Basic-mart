@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import {addCart , deleteCart} from "./redux/action/index"
@@ -18,11 +19,12 @@ const cart = ()=> {
 
 
     const cartItems = (cartItem) => {
+        const src = `${cartItem.image}`
         return (
             <div className="row #eceff1 blue-grey lighten-5" >
             <div className="container" key={cartItem.id} style={{margin:"20px"}}>
             <div className="col s4 center-align">
-             <img src={cartItem.image} height="200px" width="180px"  ></img>
+             <Image loader={()=> src} src={src} alt={cartItem.title} height="200px" width="180px"  />
             </div>
             <div className="col s6 center-align">
                 <h3>{cartItem.title}</h3>

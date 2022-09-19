@@ -1,9 +1,10 @@
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { addCart, deleteCart } from "../redux/action/index";
 import Link from "next/link";
-import Image from "next/image";
+
 
 const Product = () => {
   const router = useRouter();
@@ -42,8 +43,8 @@ const Product = () => {
     return (
         <div className="showproduct">
         <div  className="col s6" >
-           {/*  eslint-disable-next-line jsx-a11y/alt-text */}
-           <Image loader={()=> src} src={src}  height="400px" width="400px" />
+           
+           <Image loader={()=> src} src={src} alt={data.title} height="400px" width="400px" />
            <h3 className="display-6 center-align" > 
             ${data.price}
          </h3>
