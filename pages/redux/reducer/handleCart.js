@@ -1,4 +1,4 @@
-import store from "../store"
+import store from "../store.pages"
 const cart = [] 
 
 const handleCart = (state = cart, action) => {
