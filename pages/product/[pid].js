@@ -2,8 +2,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
-import  addCart from "../redux/action/index";
-import deleteCart from "../redux/action/dindex";
+import { addCart,deleteCart } from "../../store";
 import Link from "next/link";
 
 

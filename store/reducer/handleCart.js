@@ -24,7 +24,10 @@ const handleCart = (state = cart, action) => {
         break
     case "DELETEITEM":
         const exist1 = state.find((x)=> x.id === product.id)
-        if(exist1.qty == 1){
+        if (exist1 == undefined ){
+            break
+        }
+        if ( exist1.qty == 1){
             return state.filter((x)=> x.id !== exist1.id);
         }else {
             return state.map((x)=> 
