@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Nav from './Nav'
-import store from "../pages/redux/store.pages"
+import store from "../pages/redux/store.redux"
 import { Provider } from 'react-redux'
 
 
