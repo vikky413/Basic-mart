@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import {addCart , deleteCart} from "./redux/action/index"
+import addCart from "./redux/action/index"
+import deleteCart from "./redux/action/dindex";
 
 const cart = ()=> {
     // eslint-disable-next-line react-hooks/rules-of-hooks
